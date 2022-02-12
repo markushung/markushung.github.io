@@ -32,12 +32,14 @@ body {
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .key-container {
     height: 200px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     margin: 0 auto 8px;
@@ -57,8 +59,8 @@ body {
 .key-container button {
     border: 0;
     padding: 0;
-    width: 32px;
-    height: 70px;
+    width: 30px;
+    height: 60px;
     cursor: pointer;
     border-radius: 2px;
     background-color: #818384;
@@ -68,7 +70,11 @@ body {
 }
 
 .key-container button:nth-child(11) {
-    margin-left: 20px;
+    margin-left: 40px;
+}
+
+.key-container button:nth-child(19) {
+    margin-right: 40px;
 }
 
 .key-container button:nth-child(20),
@@ -94,7 +100,8 @@ body {
 }
 
 .message-container {
-    height: 30px;
+    height: 20px;
+    margin-top: 5px;
 }
 
 .message-container p {

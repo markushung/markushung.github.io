@@ -5,34 +5,9 @@ const messageDisplay = document.querySelector('.message-container')
 
 const wordle = 'ILOVEU'
 const keys = [
-    'Q',
-    'W',
-    'E',
-    'R',
-    'T',
-    'Y',
-    'U',
-    'I',
-    'O',
-    'P',
-    'A',
-    'S',
-    'D',
-    'F',
-    'G',
-    'H',
-    'J',
-    'K',
-    'L',
-    'ENTER',
-    'Z',
-    'X',
-    'C',
-    'V',
-    'B',
-    'N',
-    'M',
-    '⌫',
+    'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+    'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
+    'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫',
 ]
 const guessRows = [
     ['','','','','',''],
@@ -134,7 +109,6 @@ const showMessage = (message) => {
     const messageElement = document.createElement('p')
     messageElement.textContent = message
     messageDisplay.append(messageElement)
-    setTimeout(() => messageDisplay.removeChild(messageElement),7000)
 }
 
 const addColorToKey = (keyLetter, color) => {
