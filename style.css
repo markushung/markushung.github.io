@@ -21,9 +21,8 @@ body {
 }
 
 .title-container {
-
     text-align: center;
-    width: 510px;
+    width: 100%;
     font-size: 15px;
     border-bottom: solid 1px #3a3a3c;
 }
