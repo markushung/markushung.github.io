@@ -32,8 +32,8 @@ body {
     grid-gap: 5px;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 15px;
-    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 5px;
 }
 
 .key-container {
@@ -42,7 +42,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin: 0 auto 8px;
     touch-action: manipulation;
 }
 
@@ -58,8 +57,8 @@ body {
 .key-container button {
     border: 0;
     padding: 0;
-    width: 25px;
-    height: 45px;
+    width: 28px;
+    height: 52px;
     cursor: pointer;
     border-radius: 1px;
     background-color: #818384;
@@ -69,16 +68,16 @@ body {
 }
 
 .key-container button:nth-child(11) {
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .key-container button:nth-child(19) {
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
-    width: 60px;
+    width: 50px;
 }
 
 .tile-container div {
@@ -140,6 +139,3 @@ body {
     background-color: #538d4e !important;
     border:none !important;
 }
-
-
-@media only screen and (min-width:828px)
