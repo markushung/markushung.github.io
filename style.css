@@ -54,7 +54,7 @@ body {
     touch-action: manipulation;
 }
 
-.key-container button {
+.key-container button, .row1-container button, .row2-container button, .row3-container button {
     border: 0;
     padding: 0;
     width: 32px;
@@ -75,9 +75,9 @@ body {
     margin-right: 20px;
 }
 
-.key-container button:nth-child(20),
-.key-container button:nth-child(28) {
-    width: 50px;
+.row3-container button:nth-child(1),
+.row3-container button:nth-child(9) {
+    width: 52px;
 }
 
 .tile-container div {
