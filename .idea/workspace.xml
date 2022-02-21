@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b925131-fb43-45b3-9025-52b2b31e35ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/adrian/adrian.app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adrian/adrian.index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/adrian/adrian.style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1645450307058</updated>
-      <workItem from="1645450310134" duration="5554000" />
+      <workItem from="1645450310134" duration="5659000" />
     </task>
     <servers />
   </component>
