@@ -5,7 +5,7 @@ const keyboardRow3 = document.querySelector('.row3-container')
 const messageDisplay = document.querySelector('.message-container')
 
 
-const wordle = 'HAPPY'
+const wordle = 'ILOVEU'
 /*const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
               'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
               'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']*/
@@ -16,12 +16,12 @@ const row3 = ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']
 const keys = [row1, row2, row3]
 
 const guessRows = [
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
+    ['','','','','',''],
+    ['','','','','',''],
+    ['','','','','',''],
+    ['','','','','',''],
+    ['','','','','',''],
+    ['','','','','',''],
 ]
 let currentRow = 0
 let currentTile = 0
@@ -110,7 +110,7 @@ const checkRow = () => {
         console.log('guess is ' + guess, 'wordle is ' + wordle)
         flipTile()
         if (wordle == guess) {
-            showMessage('Happy Birthday Adrian!')
+            showMessage('Can I Be Your Valentine?')
             isGameOver = true
             return
         } else {
