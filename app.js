@@ -4,11 +4,15 @@ const messageDisplay = document.querySelector('.message-container')
 
 
 const wordle = 'HAPPY'
-const keys = [
-    'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
-    'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
-    'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫',
-]
+const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
+              'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
+              'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']
+
+/*const row1 = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']
+const row2 = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']
+const row3 = ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']
+const keys = [row1, row2, row3]*/
+
 const guessRows = [
     ['','','','',''],
     ['','','','',''],
@@ -62,7 +66,7 @@ const handleClick = (letter) => {
 }
 
 const addLetter =  (letter) => {
-    if (currentTile < 6 && currentRow < 6) {
+    if (currentTile < 5 && currentRow < 6) {
         const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
         tile.textContent = letter
         guessRows[currentRow][currentTile] = letter
@@ -88,7 +92,7 @@ const checkRow = () => {
         console.log('guess is ' + guess, 'wordle is ' + wordle)
         flipTile()
         if (wordle == guess) {
-            showMessage('Happy Birthday Adrian?')
+            showMessage('Happy Birthday Adrian!')
             isGameOver = true
             return
         } else {
