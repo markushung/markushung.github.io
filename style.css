@@ -20,6 +20,20 @@ body {
     align-items: center;
 }
 
+.help-button {
+    text-align: left;
+    border: 0;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #818384;
+    color: #ffffff;
+    margin: 3px;
+
+}
+
 .title-container {
     text-align: center;
     width: 100%;
