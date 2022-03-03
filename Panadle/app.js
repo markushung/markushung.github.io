@@ -4,8 +4,20 @@ const keyboardRow2 = document.querySelector('.row2-container')
 const keyboardRow3 = document.querySelector('.row3-container')
 const messageDisplay = document.querySelector('.message-container')
 
+let wordle
 
-const wordle = 'ILOVEU'
+const getWordle = () => {
+    fetch('http://localhost:8000/word')
+        .then(response => response.json())
+        .then(json => {
+            console.log(json)
+            wordle = json.toUpperCase()
+        })
+        .catch(err => console.log(err))
+}
+getWordle()
+
+
 /*const keys = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
               'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
               'ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']*/
@@ -16,12 +28,12 @@ const row3 = ['ENTER', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '⌫']
 const keys = [row1, row2, row3]
 
 const guessRows = [
-    ['','','','','',''],
-    ['','','','','',''],
-    ['','','','','',''],
-    ['','','','','',''],
-    ['','','','','',''],
-    ['','','','','',''],
+    ['','','','',''],
+    ['','','','',''],
+    ['','','','',''],
+    ['','','','',''],
+    ['','','','',''],
+    ['','','','',''],
 ]
 let currentRow = 0
 let currentTile = 0
@@ -68,23 +80,26 @@ row3.forEach(key => {
 
 
 const handleClick = (letter) => {
-    console.log('clicked', letter)
-    if (letter === '⌫') {
-        deleteLetter()
+    if (!isGameOver) {
+        console.log('clicked', letter)
+        if (letter === '⌫') {
+            deleteLetter()
+            console.log('guessRows', guessRows)
+            return
+        }
+        if (letter === 'ENTER') {
+            checkRow()
+            console.log('guessRows', guessRows)
+            return
+        }
+        addLetter(letter)
         console.log('guessRows', guessRows)
-        return
     }
-    if (letter === 'ENTER') {
-        checkRow()
-        console.log('guessRows', guessRows)
-        return
-    }
-    addLetter(letter)
-    console.log('guessRows', guessRows)
+
 }
 
 const addLetter =  (letter) => {
-    if (currentTile < 6 && currentRow < 6) {
+    if (currentTile < 5 && currentRow < 6) {
         const tile = document.getElementById('guessRow-' + currentRow + '-tile-' + currentTile)
         tile.textContent = letter
         guessRows[currentRow][currentTile] = letter
@@ -105,25 +120,34 @@ const deleteLetter = () => {
 
 const checkRow = () => {
     const guess = guessRows[currentRow].join('')
-
-    if(currentTile > 5) {
-        console.log('guess is ' + guess, 'wordle is ' + wordle)
-        flipTile()
-        if (wordle == guess) {
-            showMessage('Can I Be Your Valentine?')
-            isGameOver = true
-            return
-        } else {
-            if (currentRow >= 5) {
-                isGameOver = false
-                showMessage('Game Over')
-                return
-            }
-            if (currentRow < 5) {
-                currentRow++
-                currentTile = 0
-            }
-        }
+    console.log('guess'. guess)
+    if(currentTile > 4) {
+        fetch(`http://localhost:8000/check/?word=${guess}`)
+            .then(response => response.json())
+            .then(json => {
+                console.log(json)
+                if (json == false) {
+                    showMessage('Word not in list')
+                }else{
+                    console.log('guess is ' + guess, 'wordle is ' + wordle)
+                    flipTile()
+                    if (wordle == guess) {
+                        showMessage('Splendid!')
+                        isGameOver = true
+                        return
+                    } else {
+                        if (currentRow >= 5) {
+                            isGameOver = true
+                            showMessage('Game Over')
+                            return
+                        }
+                        if (currentRow < 5) {
+                            currentRow++
+                            currentTile = 0
+                        }
+                    }
+                }
+            }).catch(err => console.log(err))
     }
 }
 
