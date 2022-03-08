@@ -171,7 +171,7 @@ const flipTile = () => {
     })
 }
 
-Ka.innerHTML =
+/*Ka.innerHTML =
     "\n  <style>\n  .toaster {\n    position: absolute;\n    top: 10%;\n    left: 50%;\n    transform: translate(-50%, 0);\n    pointer-events: none;\n    width: fit-content;\n  }\n  #game-toaster {\n    z-index: "
         .concat(1e3, ";\n  }\n  #system-toaster {\n    z-index: ")
         .concat(
@@ -256,3 +256,5 @@ Ka.innerHTML =
             '</game-theme-manager>\n  ' +
             '<div id="debug-tools"></div>\n'
         );
+
+        */
