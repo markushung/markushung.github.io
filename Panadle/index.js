@@ -8,10 +8,8 @@ const app = express()
 
 app.use(cors())
 
-//own RAPID_API_KEY=3dadb2bf6dmshc5d7067624aa1f8p1d718cjsn454dea59d05a
-//ania RAPID_API_KEY=c8326cc712msh26f92b647d75484p13025cjsnc5bec1e9f4c4
 
-app.get('/word', (req, res) => {
+/*app.get('/word', (req, res) => {
     const options = {
         method: 'GET',
         url: 'https://random-words5.p.rapidapi.com/getMultipleRandom',
@@ -20,7 +18,7 @@ app.get('/word', (req, res) => {
             'x-rapidapi-host': 'random-words5.p.rapidapi.com',
             'x-rapidapi-key': process.env.RAPID_API_KEY
         }
-    }
+    }*/
 
     axios.request(options).then((response) => {
         console.log(response)
@@ -30,7 +28,7 @@ app.get('/word', (req, res) => {
     })
 })
 
-app.get('/check', (req, res) => {
+/*app.get('/check', (req, res) => {
     const word = req.query.word
 
     const options = {
@@ -41,7 +39,7 @@ app.get('/check', (req, res) => {
             'x-rapidapi-host': 'dictionary-by-api-ninjas.p.rapidapi.com',
             'x-rapidapi-key': process.env.RAPID_API_KEY
         }
-    }
+    }*/
 
     axios.request(options).then((response) => {
         console.log(response.data)

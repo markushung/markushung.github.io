@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b925131-fb43-45b3-9025-52b2b31e35ed" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/steph/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/steph/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panadle/.env" beforeDir="false" afterPath="$PROJECT_DIR$/Panadle/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panadle/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Panadle/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Panadle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Panadle/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +62,7 @@
       <updated>1645450307058</updated>
       <workItem from="1645450310134" duration="19178000" />
       <workItem from="1646325907412" duration="8832000" />
+      <workItem from="1647876294407" duration="708000" />
     </task>
     <servers />
   </component>

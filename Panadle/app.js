@@ -7,7 +7,7 @@ const messageDisplay = document.querySelector('.message-container')
 let wordle
 
 const getWordle = () => {
-    fetch('http://localhost:8000/word')
+    fetch()
         .then(response => response.json())
         .then(json => {
             console.log(json)
@@ -122,7 +122,7 @@ const checkRow = () => {
     const guess = guessRows[currentRow].join('')
     console.log('guess'. guess)
     if(currentTile > 4) {
-        fetch(`http://localhost:8000/check/?word=${guess}`)
+        fetch()
             .then(response => response.json())
             .then(json => {
                 console.log(json)
